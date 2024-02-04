@@ -1,3 +1,42 @@
 * {
   box-sizing: border-box;
 }
+
+body{
+  line-height: 0.5;
+}
+
+#github-img {
+  width:200px;
+  border-radius:20px;
+  margin-left:15px;
+  margin-bottom:15px;
+}
+
+#github {
+  text-transform: uppercase;
+  margin-left:15px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#repos{
+  margin-left:15px;
+  font-size: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#handle {
+  color:lightgray;
+  margin-left:15px;
+  font-size: 20px;
+}
+
+.button{
+  color: #1DA1F2;
+  border:none;
+  background: none;
+  float: left;
+  margin-left: 12px;
+  size: 200px;
+
+}
