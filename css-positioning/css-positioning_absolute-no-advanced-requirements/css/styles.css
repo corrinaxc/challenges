@@ -37,7 +37,6 @@ main {
 
 .box--top-left {
   background-color: #aed6f1;
-
 }
 
 .box--top-center {
@@ -47,7 +46,6 @@ main {
   left: 50%;
   top:0;
   transform: translate(-50%, 0);
-  
 }
 
 .box--top-right {
