@@ -242,7 +242,11 @@ fairly essential to completing this challenge. */
 CSS when certain conditions that we declare are met - such as a certain viewport 
 width, etc. */
 
-/* Media Query Tablet */
+@media (min-width: 600px) {
+  .card-section {
+    flex-wrap: wrap;
+  }
+}
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
@@ -251,3 +255,7 @@ width, etc. */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
+
+/* mobile - min-width - 600px - already written
+tablet - 900px - wrap
+desktop - 1200px - changes invidual elements */
