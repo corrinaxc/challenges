@@ -109,7 +109,7 @@ h1 {
 
 @media (orientation:landscape) {
   .box--three {
-    display: inline;
+    transform: rotate(90deg);
   }
 }
 
