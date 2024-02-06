@@ -265,18 +265,11 @@ width, etc. */
   }
 }
 
-@media (min-width: 1200px) {
-
+@media (min-width: 1000px) {
+  .--forest {
+    width: 100%
+  }
+  .card-section {
+    justify-content: space-around;
+  }
 }
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
-
-/* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
-
-/* mobile - min-width - 600px - already written
-tablet - 900px - wrap
-desktop - 1200px - changes invidual elements */
