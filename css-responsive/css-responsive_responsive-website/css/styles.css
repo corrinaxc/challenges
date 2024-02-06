@@ -243,9 +243,30 @@ CSS when certain conditions that we declare are met - such as a certain viewport
 width, etc. */
 
 @media (min-width: 600px) {
-  .card-section {
+  .card-section{
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    margin:10px;
   }
+
+  .product-card {
+    width: 47%;
+  }
+
+  .intro-text{
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: right;
+    width: 47%;
+    align-self: flex-start;
+    margin-right: 10px;
+    
+  }
+}
+
+@media (min-width: 1200px) {
+
 }
 /* --- */
 /* Replace this comment with your media query. */
