@@ -242,12 +242,34 @@ fairly essential to completing this challenge. */
 CSS when certain conditions that we declare are met - such as a certain viewport 
 width, etc. */
 
-/* Media Query Tablet */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+@media (min-width: 600px) {
+  .card-section{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:10px;
+  }
 
-/* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+  .product-card {
+    width: 47%;
+  }
+
+  .intro-text{
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: right;
+    width: 47%;
+    align-self: flex-start;
+    margin-right: 10px;
+    
+  }
+}
+
+@media (min-width: 1000px) {
+  .--forest {
+    width: 100%
+  }
+  .card-section {
+    justify-content: space-around;
+  }
+}
