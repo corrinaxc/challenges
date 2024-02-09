@@ -1,4 +1,4 @@
-console.clear();
+ console.clear();
 
 /*
 1. Create the data for a small social media post. Create a const variable for each data point listed below.:
@@ -11,7 +11,7 @@ console.clear();
 
 const postTitle = 'Social Media Post';
 const postBody = 'This is a small social media post'
-const likeNumber = 50
+let likeNumber = 50
 const userCreator = 'Corrina Cornish'
 const isReported = true
 
@@ -23,5 +23,8 @@ const isReported = true
 */
 
 // --v-- write your code here --v--
+
+console.log("postTitle", postTitle, "postBody", postBody, "likeNumber", likeNumber, "userCreator", userCreator, "isReported", isReported)
+console.log("likeNumber", likeNumber+=1)
 
 // --^-- write your code here --^--
