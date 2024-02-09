@@ -9,7 +9,12 @@ console.clear();
 	- a boolean called isReported
 */
 
-// --v-- write your code here --v--
+const postTitle = 'Social Media Post';
+const postBody = 'This is a small social media post'
+const likeNumber = 50
+const userCreator = 'Corrina Cornish'
+const isReported = true
+
 
 // --^-- write your code here --^--
 
