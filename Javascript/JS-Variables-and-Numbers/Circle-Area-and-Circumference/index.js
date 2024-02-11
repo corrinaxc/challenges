@@ -18,6 +18,8 @@ Run your JavaScript program to see the calculated area and circumference of the 
 let circleRadius = 5
 let circleArea = Math.PI * Math.pow((circleRadius), 2)
 let circleCircumference = 2 * Math.PI * (circleRadius)
+circleArea = circleArea.toFixed(2)
+circleCircumference = circleCircumference.toFixed(2)
 
 console.log('The area is approximately ' + (circleArea) + ' square units')
 console.log('The circumference is approximately ' + (circleCircumference) + ' units')
