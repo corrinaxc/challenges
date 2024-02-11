@@ -14,3 +14,10 @@ For a circle with a radius of 5 units:
 - The circumference is approximately 31.42 units.
 
 Run your JavaScript program to see the calculated area and circumference of the circle with the specified radius.*/
+
+let circleRadius = 5
+let circleArea = Math.PI * Math.pow((circleRadius), 2)
+let circleCircumference = 2 * Math.PI * (circleRadius)
+
+console.log('The area is approximately ' + (circleArea) + ' square units')
+console.log('The circumference is approximately ' + (circleCircumference) + ' units')
