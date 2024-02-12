@@ -15,43 +15,44 @@
 //"array!"
 //"I have no idea!"
 
-let input = "hi";
+let input = 9;
 const data = typeof(input);
 
 switch (data) {
     case "undefined":
         console.log("undefined!");
         break;
-    case "null":
-        console.log("null!");
-        break;
+
     case "number":
-        console.log("number!");
+        console.log(isNaN(input) ? 'number!' : 'not a number!');
         break;
+
     case "string":
         console.log("string");
         break;
+
     case "boolean":
         console.log("Boolean!");
-        break
+        break;
+
     case "bigint":
         console.log("bigint!");
         break;
+
     case "function":
         console.log("function!")
         break;
-    case "object":
-        console.log("object!");
-        break;
-    case "array":
-        console.log("array!");
-        break;
-    default:
-        console.log("I have no idea!")
-}
 
-if (data = "number") {
-    console.log("number!");
-} else {
-    console.log("not a number!");
+    //pay attention to the object types below
+    case "object":
+        if (Array.isArray(data)) {
+            console.log("array!")
+        } else if (data === null) {
+            console.log("null!")
+        } else {
+            console.log("object!")}
+     break;
+
+    default:
+        console.log("I have no idea!");
 }
