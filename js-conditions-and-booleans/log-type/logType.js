@@ -15,38 +15,43 @@
 //"array!"
 //"I have no idea!"
 
-let input = undefined
-const data = typeof(input) 
+let input = "hi";
+const data = typeof(input);
 
 switch (data) {
-    case: undefined:
+    case "undefined":
         console.log("undefined!");
         break;
-    case: null
+    case "null":
         console.log("null!");
         break;
-    case: Number:
+    case "number":
         console.log("number!");
         break;
-    case: string
+    case "string":
         console.log("string");
         break;
-    case: Boolean:
+    case "boolean":
         console.log("Boolean!");
         break
-    case: BigInt:
+    case "bigint":
         console.log("bigint!");
         break;
-    case: function:
+    case "function":
         console.log("function!")
         break;
-    case: Object:
-        console.log("object!")
+    case "object":
+        console.log("object!");
         break;
-    case: Array:
-        console.log("array!")
+    case "array":
+        console.log("array!");
         break;
-    case: default:
+    default:
         console.log("I have no idea!")
 }
 
+if (data = "number") {
+    console.log("number!");
+} else {
+    console.log("not a number!");
+}
