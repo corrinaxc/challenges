@@ -15,14 +15,20 @@ const moduloButton = document.querySelector('[data-js="modulo"]');
 
 addButton.addEventListener("click", () => {
   // 1. Add the two operands and store the result in a variable. Log the variable's value to the console.
+  const operandSum = operand1 + operand2
+  console.log(operandSum)
 });
 
 subtractButton.addEventListener("click", () => {
   // 2. Subtract the two operands and store the result in a variable. Log the variable's value to the console.
+  const operandSubtract = operand1 - operand2
+  console.log(operandSubtract)
 });
 
 multiplyButton.addEventListener("click", () => {
   // 3. Multiply the two operands and store the result in a variable. Log the variable's value to the console.
+  const operandMultiply = operand1 * operand2
+  console.log(operandMultiply)
 });
 
 divideButton.addEventListener("click", () => {
