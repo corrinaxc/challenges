@@ -22,12 +22,28 @@ Change the contents of this page depending on the current day and time.
 
 const display = document.querySelector('[data-js="display"]');
 
-function getGreeting() {
-  // Code here
-}
+const timeNow = new Date().getHours();
 
-function getDayColor() {
-  // Code here
+function getGreeting(timeNow) {
+  if (timeNow => 6 && timeNow <= 12) {
+    return "Good Morning"
+  }
+  else if (timeNow > 12 && timeNow <= 18) {
+    return "Good Afternoon"
+  }
+  else if (timeNow > 18 && timeNow <= 22) {
+    return "Good Evening"
+  } else {
+    return "Good Night"
+  }
+  }
+
+dateNow = new Date().getDay()
+
+function getDayColor(dateNow) {
+  if (dateNow = 1) {
+    backgroundColor = dark
+  }
 }
 
 display.textContent = getGreeting();
