@@ -20,10 +20,15 @@ printSquare(5);
    The formula is: circumference = 2 * Pi * radius
 */
 
+function printCircumference(radius) {
+   let circumference = 2 * Math.PI * radius;
+   console.log(circumference);
+}
+
 // Uncomment the following function calls and implement the function printCircumference
 
-// printCircumference(4);
-// printCircumference(6);
+printCircumference(4);
+printCircumference(6);
 
 /*
 3: We want to use a function which accepts the width and length of a rectangle
