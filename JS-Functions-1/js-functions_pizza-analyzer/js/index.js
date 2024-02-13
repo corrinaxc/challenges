@@ -9,11 +9,16 @@ const outputSection = document.querySelector('[data-js="output-section"]');
 const output = document.querySelector('[data-js="output"]');
 
 pizzaInput1.addEventListener("input", () => {
-  calculatePizzaGain(pizzaInput1.value, pizzaInput2.value)
+   let pizzaSize1 = pizzaInput1.value;
+   let pizzaSize2 = pizzaInput2.value;
+   calculatePizzaGain(pizzaSize1, pizzaSize2);
+   updatePizzaDisplay(pizzaElement, newSize);
 });
 
 pizzaInput2.addEventListener("input", () => {
-  calculatePizzaGain(pizzaInput1.value, pizzaInput2.value)
+   let pizzaSize1 = pizzaInput1.value;
+   let pizzaSize2 = pizzaInput2.value;
+   calculatePizzaGain(pizzaSize1, pizzaSize2)
 });
 
 // Task 1
@@ -41,7 +46,6 @@ function calculatePizzaGain(diameter1, diameter2) {
 }
 
 // calculatePizzaGain(24, 28)
-calculatePizzaGain(pizzaSize1, pizzaSize2)
 
 // Task 2
 /*Great! Now we know how much pizza we gain if we choose the second pizza. But we don't have any visual relations between these two numbers. So lets adapt the pizza displays.
@@ -56,8 +60,11 @@ calculatePizzaGain(pizzaSize1, pizzaSize2)
 
 // define the function updatePizzaDisplay here
 
-function updatePizzaDisplay(){
-  
+// divide the current width by 24 and multiply by the new number?? 
+
+function updatePizzaDisplay(pizzaElement, newSize){
+   let newSize = pizzaInput1.value;
+   pizzaElement.style.width = (newSize / 24 * 100) + 'px'; 
 }
 
 
