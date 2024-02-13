@@ -7,37 +7,27 @@ console.log("Exercise 1:");
 */
 
 // Uncomment the next line of code and figure out why it does not work:
-// logText;
 
 function logText() {
   console.log("This text does not appear. Why?");
 }
 
+logText(); // added () to invoke and moved below function delcaration
 console.log("-------------");
 console.log("Exercise 2:");
 /*
 2: Look at the functions below. They are almost identical. Can you find a way to generalize them into a new function with an input parameter? Replace the function calls below with your new function.
 */
 
-function greetBob() {
-  console.log("Welcome Bob, good to see you again!");
-}
-
-function greetAlice() {
-  console.log("Welcome Alice, good to see you again!");
-}
-
-function greetMary() {
-  console.log("Welcome Mary, good to see you again!");
-}
-
-greetAlice();
-greetBob();
-greetMary();
-
 // --v-- write your code here --v--
 
-function greet() {}
+function greet(name) {
+  console.log("Welcome " + name + " , good to see you again!");
+}
+
+greet("Alice");
+greet("Bob");
+greet("Mary");
 
 // --^-- write your code here --^--
 
