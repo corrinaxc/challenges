@@ -10,6 +10,11 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const bookTitle = "To Kill a Mockingbird"
+const bookAuthor = "Harper Lee"
+let rating = 4.6
+let salesNumber = 2000
+
 // --^-- write your code here --^--
 
 /*
