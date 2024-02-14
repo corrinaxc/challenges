@@ -19,13 +19,22 @@
       <form for="title">
         <fieldset>
           <legend>Enter your information</legend>
-          <label aria-describedby="name-input">Name:</label>
-          <input id="name-Input" type="text" name="name" />
-          <label aria-describedby="age-input">Age:</label>
-          <input id="age-Input" type="text" name="age" />
-          <label aria-describedby="color-input">Color you cannot see:</label>
-          <input id="color-Input" type="color" name="color" />
-          <textarea rows="7" placeholder="Leave us a message..."></textarea>
+
+          <label for="name-input">Name:</label>
+          <input id="name-input" type="text" name="name" />
+
+          <label for="age-input">Age:</label>
+          <input id="age-input" type="text" name="age" />
+
+          <label for="color-input">Color you cannot see:</label>
+          <input id="color-input" type="color" name="color" />
+
+          <label for="message-box">Leave us a message...</label>
+          <textarea
+            id="message-box"
+            rows="7"
+            placeholder="Leave us a message..."
+          ></textarea>
           <button type="submit">Submit</button>
         </fieldset>
       </form>
