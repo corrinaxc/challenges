@@ -63,7 +63,7 @@ function calculatePizzaGain(diameter1, diameter2) {
 // divide the current width by 24 and multiply by the new number?? 
 
 function updatePizzaDisplay(pizzaElement, newSize){
-   let newSize = pizzaInput1.value;
+   let newDisplaySize = 
    pizzaElement.style.width = (newSize / 24 * 100) + 'px'; 
 }
 
