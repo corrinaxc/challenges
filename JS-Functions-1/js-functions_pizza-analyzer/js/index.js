@@ -25,8 +25,8 @@ pizzaInput2.addEventListener("input", () => {
 });
 
 function calculatePizzaGain(diameter1, diameter2) {
-   let area1 = diameter1 * Math.PI;
-   let area2 = diameter2 * Math.PI;
+   let area1 = (diameter1/2) * (diameter1/2) * Math.PI;
+   let area2 = (diameter2/2) * (diameter2/2) * Math.PI;
    let pizzaGain = Math.round((area2 - area1) / area1 * 100);
    output.value = pizzaGain
  }
