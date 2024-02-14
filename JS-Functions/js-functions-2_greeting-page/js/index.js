@@ -22,29 +22,40 @@ Change the contents of this page depending on the current day and time.
 
 const display = document.querySelector('[data-js="display"]');
 
-const timeNow = new Date().getHours();
 
-function getGreeting(timeNow) {
-  if (timeNow => 6 && timeNow <= 12) {
+function getGreeting() {
+  const timeNow = new Date().getHours();
+  console.log(timeNow)
+  if (timeNow >= 6 && timeNow <= 11) {
     return "Good Morning"
   }
-  else if (timeNow > 12 && timeNow <= 18) {
+  else if (timeNow <= 17) {
     return "Good Afternoon"
   }
-  else if (timeNow > 18 && timeNow <= 22) {
+  else if (timeNow <= 21) {
     return "Good Evening"
   } else {
     return "Good Night"
   }
-  }
+}
 
-dateNow = new Date().getDay()
-
-function getDayColor(dateNow) {
-  if (dateNow = 1) {
-    backgroundColor = dark
+function getDayColor() {
+  let dateNow = new Date().getDay();
+  console.log(dateNow)
+  if (dateNow == 1) {
+    document.body.style.backgroundColor = ('darkgrey')
+  } else if (dateNow >= 1 && dateNow <= 5) {
+    document.body.style.backgroundColor = ('lightblue')
+  } else {
+    document.body.style.backgroundColor = ('hotpink')
   }
 }
 
 display.textContent = getGreeting();
 document.body.style.backgroundColor = getDayColor();
+
+
+/*- Write a function getDayColor that returns a different color depending on the current weekday:
+  - monday: "darkgray"
+  - tuesday - friday: "lightblue"
+  - saturday - sunday: "hotpink"*/
