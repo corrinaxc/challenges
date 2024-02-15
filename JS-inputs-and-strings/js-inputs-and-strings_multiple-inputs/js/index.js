@@ -19,6 +19,5 @@ button.addEventListener("click", () => {
     const inputOne = firstInput.value;
     const inputTwo = secondInput.value;
     secondInput.value = inputOne.toUpperCase();
-
-
+    firstInput.value = inputTwo;
 })
