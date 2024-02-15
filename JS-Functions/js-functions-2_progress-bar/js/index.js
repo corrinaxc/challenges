@@ -4,7 +4,7 @@ Progress Bar
 
 Build a progress bar that indicates how much the user has scrolled down the page.
 For that:
- - change the starting width of the progressBar in the CSS file to 0%
+ DONE - change the starting width of the progressBar in the CSS file to 0%
  - write a function "calculateScrollPercentage" which calculates and returns in percent
    how far the user has scrolled down the page.
    Use the following attributes to achieve this:
@@ -21,4 +21,20 @@ For that:
 
 const progressBar = document.querySelector('[data-js="progress-bar"]');
 
-function calculateScrollPercentage() {}
+function calculateScrollPercentage() {
+  const scrollPercentage = Math.round(window.scrollY / ((document.body.clientHeight - window.innerHeight)) * 100) + "%";
+  console.log(scrollPercentage)
+  progressBar.style.width = scrollPercentage;
+}
+
+document.addEventListener("scroll", () => {
+  calculateScrollPercentage();
+})
+
+
+// console log the values, add scroll event listener 
+/* document.body.clientHeight/window.innerHeight = eg . 2
+scrollPosition / (documentHeight - viewportHeight);
+const scrollPercentage = window.scrollY / (document.body.clientHeight - window.innerHeight) * 100
+  var p = elm.parentNode
+  return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight ) * 100*/
