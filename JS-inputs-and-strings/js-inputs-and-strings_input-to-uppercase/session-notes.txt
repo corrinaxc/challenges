@@ -1,0 +1,11 @@
+`${greeting} --> ${firstName}` "back-ticks"
+can console.log from here ut good practice to store in variable
+string methods. 
+
+// condition ? ifTrue : ifFalse
+
+form.addEventListener("submit", (e) => {
+
+})
+
+e.preventDefault()
