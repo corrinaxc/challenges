@@ -2,7 +2,7 @@
 
 Change the appearance of the box according to the values of the sliders (color, border radius, rotation)
 
-– [ ] Add an event listener for each input element.
+– [X ] Add an event listener for each input element.
 – [ ] When the slider control of inputColor is moved, change the background color of the box. Hint: You need to work with the hsl() functional notation for colors.
 – [ ] When the slider control of inputRadius is moved, change the border radius of the box. If the control reaches the right end, make the box look like a circle.
 – [ ] When the slider control of inputRotation is moved, rotate the box. Hint: You may need to work with the CSS property "transform" and a value that contains "rotate" and "deg".
@@ -18,10 +18,18 @@ For further information check MDN:
 */
 
 const box = document.querySelector('[data-js="box"]');
-const colorSlider = document.querySelector('[data-js="input-color"]');
-const radiusSlider = document.querySelector('[data-js="input-radius"]');
-const rotationSlider = document.querySelector('[data-js="input-rotation"]');
+const inputColor = document.querySelector('[data-js="input-color"]');
+const inputRadius = document.querySelector('[data-js="input-radius"]');
+const inputRotation = document.querySelector('[data-js="input-rotation"]');
 
-colorSlider.addEventListener("input", () => {
-    
+inputColor.addEventListener("input", () => {
+    box.style.backgroundColor = `hsl(${inputColor.value} 70% 60%)`;
+});
+
+inputRadius.addEventListener("input", (e) => {
+    box.style.borderRadius = inputRadius.value + "%";
+})
+
+inputRotation.addEventListener("input", () => {
+    box.style.transform = `rotate(${inputRotation.value}deg)`;
 })
