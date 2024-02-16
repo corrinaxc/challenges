@@ -11,9 +11,9 @@ console.log(formElements.firstname.value)
 always add a name attribute eg "firstName0
 
 shortcut:
-constformData = newFormaData(evt.target)
+constformData = new FormaData(evt.target)
 const Userdata = Object.fromEntries(formData);
-console.log("userData", userData
+console.log("userData", userData)
 
 
 output.innerHTML = `<h1>${charactersLeft}</h1>`;
