@@ -6,8 +6,9 @@ const clearButton = document.querySelector('[data-js="clear-button"]');
 
 addButton.addEventListener("click", (e) => {
   e.preventDefault();
-  const newToastMessage = document.createElement('li'); //created paragraph element
-  newToastMessage.textContent = "toastie toast"; // assigned text value to paragraph element
+  const newToastMessage = document.createElement('li'); //created list element
+  newToastMessage.textContent = "toastie toast"; // assigned text value to list element
+  newToastMessage.classList.add("toast-container__message"); //added style class to new element
   toastContainer.append(newToastMessage); // append text to paragraph element 
   console.log(toastContainer);
 });
