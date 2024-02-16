@@ -4,10 +4,20 @@ const toastContainer = document.querySelector('[data-js="toast-container"]');
 const addButton = document.querySelector('[data-js="add-button"]');
 const clearButton = document.querySelector('[data-js="clear-button"]');
 
-addButton.addEventListener("click", () => {
-  // Exercise: Append a new entry to the toast messages container
+addButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const newToastMessage = document.createElement('li'); //created paragraph element
+  newToastMessage.textContent = "toastie toast"; // assigned text value to paragraph element
+  toastContainer.append(newToastMessage); // append text to paragraph element 
+  console.log(toastContainer);
 });
 
 clearButton.addEventListener("click", () => {
   // Exercise: Clear the stack of toast messages
 });
+
+
+/* const newToastMessage = document.createElement('p'); //created paragraph element
+  newToastMessage.textContent = "toastie toast"; // assigned text value to paragraph element
+  toastContainer.append(newToastMessage); // append text to paragraph element 
+});*/
