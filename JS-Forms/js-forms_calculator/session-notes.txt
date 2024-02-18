@@ -1,0 +1,19 @@
+if (confirm('do you want to leave the page"))
+e.preventDefault()
+safer to write return
+not useful to have a string - better to have js objects to manipulate more complex data
+console.log("evt", evt) - the kind of event
+evt.target; 
+evt.target.elements;
+
+const formElements = evt.target.elements;
+console.log(formElements.firstname.value)
+always add a name attribute eg "firstName0
+
+shortcut:
+constformData = newFormaData(evt.target)
+const Userdata = Object.fromEntries(formData);
+console.log("userData", userData
+
+
+output.innerHTML = `<h1>${charactersLeft}</h1>`;
