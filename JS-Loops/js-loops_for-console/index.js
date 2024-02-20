@@ -1,3 +1,5 @@
+/*messed up my gitHub so adding this comment in :-) */
+
 console.clear();
 
 for (let counter = 0; counter <= 100; counter++) {
