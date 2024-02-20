@@ -27,30 +27,7 @@ for (const key in languages) {
   language.textContent = languages[key];
   select.append(language);
 }
-
-console.log(select);
-
 // --^-- write/change code here --^--
-
-/*# For...in Loop and Select Navigation
-
-We can use loops for creating HTML elements. In this Codesandbox, the website needs a select input with language options and a navigation bar. Let's do this with the help of `for...in`!
-
-## Task
-
-### Part 1: Creating a Select Input
-
-Looking at the `./js/index.js` , there is a `languages` object with some key-value pairs. Additionally, a `select` element with the name "languages" is created and appended to the main element.
-
-Iterate through the `languages` object using `for...in` and add the `option` elements for this dropdown menu.
-
-The following hints may guide you:
-
-- Create one `option` element for each entry in `languages`.
-- For each option, set its `value` and `textContent` to the value of each entry in `languages`. You will need bracket notation, e.g. `languages[myIteratorName]`.
-- Don't forget to append each option!*/
-
-
 
 // Part 2: Creating a Navigation Bar
 
@@ -65,6 +42,13 @@ const ul = document.createElement("ul");
 main.append(navElement);
 navElement.append(ul);
 
-// --v-- write/change code here --v--
+for (const key in nav) {
+  const liItem = document.createElement("li");
+  const anchorTag = document.createElement("a");
+  anchorTag.href = nav[key].href; 
 
-// --^-- write/change code here --^--
+  anchorTag.textContent = nav[key].text; 
+
+  liItem.append(anchorTag); 
+  ul.append(liItem); 
+}
