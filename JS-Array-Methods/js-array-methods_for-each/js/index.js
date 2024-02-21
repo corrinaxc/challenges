@@ -19,4 +19,18 @@ const colors = [
   "#A5A5A5",
 ];
 
-colors.forEach();
+colors.forEach((color) => {
+  const coloredBox = document.createElement("div");
+  coloredBox.classList.add("color-box")
+  coloredBox.style.backgroundColor = color;
+  document.body.appendChild(coloredBox);
+});
+
+
+/*In the `./js/index.js` file, there is an array `colors` containing some hex codes. Create colored boxes from the array of hex codes using the `forEach` array method.
+
+The following hints may guide you:
+
+- For each hex code a new `div` with the class `color-box` should be created.
+- The `background-color` of the `div` should be the current hex code.
+- The element should be added to the page.*/
