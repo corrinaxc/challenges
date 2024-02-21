@@ -32,7 +32,7 @@ console.log(onlyCardWithIdTwo);
 
 //
 const allCardsWith3Tags = cards.filter((card) => {
-  return card.tags.length >= 3
+  return card.tags.length === 3
   });
 
   console.log(allCardsWith3Tags);
