@@ -31,3 +31,11 @@ const questionsAndAnswersTogether = null; // ["How often can I use <header>? - A
 const questionAndAnswer = null; // [{ question: 'How often can I use <header>?', answer: 'As often as you like.'}, {...}]
 
 export { lowerCaseAnswers, questionsAndAnswersTogether, questionAndAnswer };
+
+/* In the `./index.js` file, there is a `cards` array with three objects.
+
+Below this array, you will find a couple of variables (e.g. `lowerCaseAnswers`). They all are initialized with `null`.
+
+And now it's your turn: delete the value `null` and write code such that the variables have a value corresponding to their name. Use `map` to achieve this goal.
+
+You will find some hints as comments. */
