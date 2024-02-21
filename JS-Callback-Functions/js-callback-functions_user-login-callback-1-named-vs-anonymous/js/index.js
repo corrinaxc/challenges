@@ -9,14 +9,9 @@ function showWelcomeMessage () {
   console.log("Welcome! You are logged in now.");
 }
 
-handleUserLogin(showWelcomeMessage);
+// handleUserLogin(showWelcomeMessage);
 
-// Call handleUserLogin below!
+handleUserLogin(() => {
+  console.log("Welcome! You are logged in now.");
+});
 
-/*
-You should write a callback function in two different ways.
-In both cases your callback function should log the following text to the console:
-"Welcome! You are logged in now."
-
-1. Write a function with the "function" keyword named "showWelcomeMessage" which logs the desired text. Then
-   call the higher order function "handleUserLogin" and pass your callback function "showWelcomeMessage" as the first argument.*/
