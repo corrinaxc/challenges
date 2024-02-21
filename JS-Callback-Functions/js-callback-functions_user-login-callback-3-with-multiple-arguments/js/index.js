@@ -6,6 +6,11 @@ function handleUserLogin(onSuccess) {
 
 // The exercise starts here!
 
+function showWelcomeMessage(userName, userRole) {
+  console.log(`Welcome ${userName}! You are logged in now as ${userRole}.`);
+}
+
+handleUserLogin(showWelcomeMessage);
 
 /* You should write a callback function in two different ways.
 In both cases your callback function should accept two parameters: "userName" and "userRole".
