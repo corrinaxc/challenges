@@ -4,6 +4,12 @@ function handleUserLogin(onSuccess) {
   onSuccess("Jane Doe");
 }
 
+function showWelcomeMessage(){
+  console.log("Welcome Jane Doe! You are logged in now.");
+}
+
+handleUserLogin(showWelcomeMessage);
+
 // The exercise starts here!
 
 /*You should write a callback function in two different ways.
