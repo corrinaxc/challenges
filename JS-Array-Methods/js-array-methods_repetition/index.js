@@ -75,11 +75,26 @@ const allTitlesInOneString = null; // 'Crepes, Scrambled Eggs, ...'
  2: `filter` exercises
 */
 
-const recipesThatOnlyTake60minutesOrLess = 
+// 1
+const recipesThatOnlyTake60minutesOrLess = recipes.filter((recipe) => {
+  return recipe.duration <= 60;
+})
 
-const allRecipesWithMoreThan2Servings = null;
+console.log(recipesThatOnlyTake60minutesOrLess);
 
-const allRecipesWithTitlesLongerThan12Characters = null;
+// 2
+const allRecipesWithMoreThan2Servings = recipes.filter((recipe) => {
+  return recipe.servings > 2;
+});
+
+console.log(allRecipesWithMoreThan2Servings);
+
+// 3
+const allRecipesWithTitlesLongerThan12Characters = recipes.filter((recipe) => {
+  return recipe.title.length > 12;
+})
+
+console.log(allRecipesWithTitlesLongerThan12Characters);
 
 export {
   onlyTitles,
