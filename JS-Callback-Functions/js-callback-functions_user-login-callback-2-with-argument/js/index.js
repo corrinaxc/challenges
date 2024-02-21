@@ -4,8 +4,8 @@ function handleUserLogin(onSuccess) {
   onSuccess("Jane Doe");
 }
 
-function showWelcomeMessage(){
-  console.log("Welcome Jane Doe! You are logged in now.");
+function showWelcomeMessage(userName){
+  console.log(`Welcome ${userName}! You are logged in now.`);
 }
 
 handleUserLogin(showWelcomeMessage);
