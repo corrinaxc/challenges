@@ -28,6 +28,10 @@ body {
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    animation: my-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
 }
 
 .start-button:disabled {
@@ -44,11 +48,15 @@ body {
   }
   30% {
     opacity: 1;
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
   50% {
     opacity: 1;
-    transform: scale(2);
+    transform: scale(1.5);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.2)
   }
   100% {
     opacity: 0;
