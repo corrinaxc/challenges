@@ -66,7 +66,8 @@ body {
 /* Toast */
 
 .toast {
-  position: absolute;
+  position: absolute; 
+  width: 200px;
   top: 20px;
   left: 20px;
   overflow: hidden;
@@ -75,23 +76,39 @@ body {
   background: rgb(71, 212, 94);
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  transition: transform 0.5s;
+  animation: my-toast-moves;
+  animation-duration: 5s;
 }
 
-.toast--hidden {
-  transform: translate3d(-150%, 0, 0);
-  transition: transform 5s; /* Add transition property */
+ /* .toast--hidden {
+    transform: translate3d(-150%, 0, 0);
+    transition: transform 5s ease; /* Add transition property 
+  } */
+
+@keyframes my-toast-moves {
+  0% {
+    top: 20px;
+    left: 20px;
+  }
+  30% {
+    top: 20px;
+    right: 20px;
+  }
+  50% {
+    bottom: 20px;
+    right: 20px;
+  }
+  70% {
+    bottom: 20px;
+    left: 20px;
+  }
+  100% {
+    top: 20px;
+    left: 20px;
+  }
 }
 
-.toast:hover {
-  transform: translate(85vw, 0);
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  transition: transform 5s; /* Add transition property */
-}
-
-.countdown {
+/* .countdown {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -106,4 +123,4 @@ body {
   opacity: 0.8;
   width: 0%;
   transition: width linear 2000ms;
-}
+} */
