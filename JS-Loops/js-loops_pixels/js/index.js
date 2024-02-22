@@ -132,8 +132,6 @@ for (row of pixelValues) {
     const pixel = document.createElement("div");
     pixel.classList.add("pixel");
     pixel.style.backgroundColor = color; 
-    pixelRow.appendChild(pixel); 
+    canvas.appendChild(pixel); 
   }
-
-  canvas.appendChild(pixelRow); 
 }
