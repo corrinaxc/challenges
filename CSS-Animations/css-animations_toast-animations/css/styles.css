@@ -80,18 +80,16 @@ body {
 
 .toast--hidden {
   transform: translate3d(-150%, 0, 0);
+  transition: transform 5s; /* Add transition property */
 }
 
-/*.toast:hover {
- transform: translate(85vw, 0);
- position: absolute;
- top: 20px;
- right:20px; 
-
-
-}*/
-
-Countdown 
+.toast:hover {
+  transform: translate(85vw, 0);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 5s; /* Add transition property */
+}
 
 .countdown {
   position: absolute;
@@ -99,7 +97,6 @@ Countdown
   left: 0;
   height: 5px;
   background-color: black;
-
   opacity: 0;
   width: 100%;
   transition: opacity 0.25s;
@@ -108,5 +105,5 @@ Countdown
 .countdown--visible {
   opacity: 0.8;
   width: 0%;
-  transition: width linear 2000ms; 
-} 
+  transition: width linear 2000ms;
+}
