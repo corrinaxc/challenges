@@ -17,3 +17,23 @@ A word (string) of length 0 < str < 1000 (In javascript you may get slightly mor
 
 The middle character(s) of the word represented as a string.*/
 
+function getMiddle(str) {
+    const half = Math.ceil(str.length /2);
+    const startIndex = half - 1;
+
+    if (str.length % 2 === 0) {
+        //even
+        return str.substring(startIndex, startIndex + 2)}
+        else {
+        return str.substring(startIndex, startIndex +1)}
+}
+
+console.log(getMiddle('hello'));
+
+
+// ALTERNATIVE (better) METHOD
+
+function getMiddle(str) {
+    while(str.length > 2)
+        str = str.substring(1, str.length - 1);
+}
