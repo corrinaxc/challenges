@@ -124,6 +124,13 @@ const pixelValues = [
 
 const canvas = document.querySelector('[data-js="canvas"]');
 
+for (row of pixelValues) {
+  const pixel = document.createElement("div");
+  pixel.classList.add("pixel");
+  pixel.style.backgroundColor = "row";
+  canvas.append(pixel);
+}
+
 /* Use the color values in the array `pixelValues` to create "pixel" elements and append them to the `canvas` element.
 
 - use `for` loops to generate the pixel elements
