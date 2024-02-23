@@ -84,11 +84,6 @@ console.log(firstAnimalStartingWithLetterG);
 const indexOfAnimalWithNameLongerFive = animals.findIndex((animal => animal.name.length > 5));
 console.log(indexOfAnimalWithNameLongerFive);
 
-//colors.findIndex((color) => color.startsWith("g"));
-
-// access animal.name.length > 5
-// find index
-
 // Note:
 // - Sorting strings is slightly more complicated than sorting numbers.
 // - You will need if-statements and return values of -1, 1, and 0.
@@ -99,6 +94,9 @@ console.log(indexOfAnimalWithNameLongerFive);
 // -> Use animals.slice().sort(...) to make a copy (and the tests work).
 
 const animalsSortedAlphabetically = null;
+
+// access the name
+// if statement to reorder strings
 
 const animalsSortedByWeightStartingWithLowest = null;
 
