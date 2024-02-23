@@ -7,27 +7,6 @@ import { Bookmark } from "./lib/Bookmark.js";
 import { handleAnswerButtonClick } from "./lib/handleBookmarkButtonClick.js";
 import { Card } from "./lib/card.js";
 
-
-
-
-
-
-
-  const bookmarkButton = Bookmark({
-    active: props.isBookmarked,
-    onClick: handleBookmarkButtonClick,
-  });
-  bookmarkButtonWrapper.append(bookmarkButton);
-
-  function handleAnswerButtonClick() {
-    answer.classList.toggle("card__answer--active");
-  }
-
-  answerButton.addEventListener("click", handleAnswerButtonClick);
-
-  return card;
-}
-
 function CardList() {
   const cardList = document.createElement("section");
   cardList.classList.add("card-list");
