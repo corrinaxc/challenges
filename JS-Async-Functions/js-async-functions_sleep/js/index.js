@@ -12,8 +12,9 @@ button3.addEventListener("click", async () => {
   icon.textContent = "⏰";
 });
 
-button5.addEventListener("click", () => {
+button5.addEventListener("click", async () => {
   icon.textContent = "💤";
+  await sleep(5);
   icon.textContent = "⏰";
 });
 
