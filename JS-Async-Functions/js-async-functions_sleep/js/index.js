@@ -8,7 +8,7 @@ const body = document.body;
 
 button3.addEventListener("click", async () => {
   icon.textContent = "💤";
-  sleep(3);
+  await sleep(3);
   icon.textContent = "⏰";
 });
 
