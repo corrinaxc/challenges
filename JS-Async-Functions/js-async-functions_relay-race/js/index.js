@@ -10,6 +10,9 @@ const startRaceButton = document.querySelector('[data-js="start-race-button"]');
 //                                         ↙️
 startRaceButton.addEventListener("click", () => {
   startRaceButton.setAttribute("disabled", "");
+  animateRunner(runner1)
+  animateRunner(runner2);
+  animateRunner(runner3);
 
   /**
    * Hint 1:
