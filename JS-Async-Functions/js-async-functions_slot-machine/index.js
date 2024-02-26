@@ -22,6 +22,13 @@ root.append(machine, spinButton, result);
 //                                      ↙️
 spinButton.addEventListener("click", async () => {
   spinButton.disabled = true;
+  const result = await Promise.all([
+  wheel1.spin(),
+  wheel2.spin(),
+  wheel3.spin(),
+  ]);
+  result = getMaxCount()
+
   /**
    * Hint 1:
    * The wheel elements have a spin method that returns a promise.
@@ -65,6 +72,8 @@ spinButton.addEventListener("click", async () => {
 
   spinButton.disabled = false;
 });
+
+
 
 /**
  * Bonus hint:
