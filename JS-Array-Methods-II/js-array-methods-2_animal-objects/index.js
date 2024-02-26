@@ -93,19 +93,33 @@ console.log(indexOfAnimalWithNameLongerFive);
 // Hint: sort() mutates the original array, which is bad.
 // -> Use animals.slice().sort(...) to make a copy (and the tests work).
 
-const animalsSortedAlphabetically = null;
+const animalsSortedAlphabetically = animals.map(animals => animals.name).sort((a, b) => {
+if (a < b) {
+  return -1
+} if (a > b) {
+  return 1
+} 
+return 0
+});
+
+console.log(animalsSortedAlphabetically);
 
 // access the name
 // if statement to reorder strings
 
-const animalsSortedByWeightStartingWithLowest = null;
+const animalsSortedByWeightStartingWithLowest = animals.map(animals => animals.weight).sort((a,b) => a - b);
+console.log(animalsSortedByWeightStartingWithLowest);
 
-const animalsSortedByWeightReversed = null;
+const animalsSortedByWeightReversed = animals.map(animals =>animals.weight).sort((a,b) => b - a);
+console.log(animalsSortedByWeightReversed);
 
-const animalWithWeightMoreThanFivehundredExists = null;
+const animalWithWeightMoreThanFivehundredExists = animals.some(animal => animal.weight > 500);
+console.log(animalWithWeightMoreThanFivehundredExists);
 
 // Hint: Filter for Europe first, then check every animal for its weight.
-const allAnimalsInEuropeWeighLessThanOnehundred = null;
+const allAnimalsInEuropeWeighLessThanOnehundred = animals.filter((animal) => {
+return animals.continents("Europe");});
+console.log(allAnimalsInEuropeWeighLessThanOnehundred);
 
 // Hint: filter + map + reduce
 const weightOfAllAnimalsInAfrica = null;
