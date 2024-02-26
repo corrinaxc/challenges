@@ -14,3 +14,33 @@
 // ...because there are 4 pairs: 2, 20, 6 and 2 (again)
 
 
+function duplicates(array){
+    const sorted = array.sort((a,b) => a - b);
+    let pairs = 0;
+
+    for (let i=o; i < array.length -1 ; i++) {
+        console.log(array[i], array [i+1])
+        if ((array[i]) === array[i + 1]) {
+            pairs++
+            i++
+
+        }
+    }
+    return pairs;
+}
+
+// ALT 
+
+function duplicates2(array){
+    let pairs = 0;
+    const list = []
+    for (let num of array) {
+        if (lift[num] !== undefined) {
+            list[num] = undefined
+            pairs++
+        } else {
+            list[num] = 'x'
+        }
+    }
+    return pairs;
+}
