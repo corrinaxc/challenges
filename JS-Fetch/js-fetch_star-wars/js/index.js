@@ -41,6 +41,19 @@ fetchDataAndRender();
 
 // --v-- your code below this line --v--
 
-function fetchDataAndRender() {
-  fetch(); // ?
-}
+async function fetchDataAndRender() {
+  try {
+    const response = await fetch("https://swapi.dev/api/people");
+    if (!response.ok) {
+      console.error("Bad Response!");
+    }
+    const characterData = await response.json();
+    console.log(characterData);
+    characterData.results.forEach(character => {
+      const cardElement = new Card(character);
+      renderElement(cardElement);
+    });
+  } catch(error) {
+    console.error("error");
+  }  
+  } 
