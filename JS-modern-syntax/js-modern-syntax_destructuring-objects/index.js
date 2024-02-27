@@ -10,16 +10,27 @@ const company = {
   location: "Berlin",
 };
 
+export const {course: courseName} = company;
+
 // example: export const {value1} = myObject;
 
 // EXERCISE 2
 // We have an object called 'user'.
+const user = { name: "John", years: 30 };
+
 // Write the destructuring assignment that reads:
 //  2.1: 'name' property into the variable 'name'.
+
+export const {name: name} = user;  
+
 //  2.2: 'years' property into the variable 'age'.
+
+export const {years: age} = user;
+
 //  2.3: 'isAdmin' property into the variable 'isAdmin' (false, if no such property exists)
 
-const user = { name: "John", years: 30 };
+export const { isAdmin = false } = user;
+
 
 // EXERCISE 3
 // Extract the variables from the dog object and
@@ -31,6 +42,8 @@ const dog = {
   age: 5,
 };
 
+export const {name: dogName, breed: dogBreed, age: dogAge} = dog;
+
 // EXERCISE 4
 // Extract the 'lastName' property from the person object as "personLastName".
 // Store all other properties in an object called "moreInformation".
@@ -40,3 +53,5 @@ const person = {
   age: 24,
   firstName: "Alex",
 };
+
+export const {lastName: personLastName, ...moreInformation} = person;
