@@ -1,3 +1,5 @@
+import { handleFormSubmit } from "./handleFormSubmit.js";
+
 export function Form() {
     const form = document.createElement("form");
     form.classList.add("form");

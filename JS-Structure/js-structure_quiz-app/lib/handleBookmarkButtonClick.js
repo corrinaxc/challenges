@@ -1,3 +1,5 @@
+import { cards } from "./global.js";
+
 export function handleBookmarkButtonClick(event) {
     cards.find((card) => card.question === props.question).isBookmarked =
       !props.isBookmarked;

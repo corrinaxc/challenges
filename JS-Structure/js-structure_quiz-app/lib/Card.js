@@ -1,6 +1,5 @@
 import { Bookmark } from "./Bookmark.js";
-
-
+import { cards } from "./global.js";
 
 export function Card(props) {
     const card = document.createElement("article");
