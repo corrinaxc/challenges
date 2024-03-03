@@ -1,12 +1,6 @@
-// Store the cards in a global state
-// import { cards } from "./lib/global.js";
-import { Header } from "./lib/header.js"
-// import { handleFormSubmit } from "./lib/handleFormSubmit.js";
-import { Form } from "./lib/Form.js";
-// import { Bookmark } from "./lib/Bookmark.js";
-// import { handleAnswerButtonClick } from "./lib/handleBookmarkButtonClick.js";
-// import { Card } from "./lib/card.js";
-import { CardList } from "./lib/cardList.js";
+import { Header } from "./components/Header/header.js"
+import { Form } from "./components/Form/Form.js";
+import { CardList } from "./components/CardList/cardList.js";
 
 function App() {
   const app = document.createElement("main");

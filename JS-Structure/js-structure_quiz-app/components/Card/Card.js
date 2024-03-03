@@ -1,5 +1,5 @@
-import { Bookmark } from "./Bookmark.js";
-import { cards } from "./global.js";
+import { Bookmark } from "../Bookmark/Bookmark.js";
+import { cards } from "../../lib/global.js";
 
 export function Card(props) {
     const card = document.createElement("article");
