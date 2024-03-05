@@ -5,7 +5,12 @@ export default function App() {
 }
 
 function CreateButton({color, disabled, text}) {
-   return (<button style={{height: "100px", backgroundColor: color}} disabled={disabled}>
+  const handleClick = () => {
+    console.log("clicked");
+    alert("clickety click")
+   };
+  return (<button style={{height: "100px", backgroundColor: color}} disabled={disabled} onClick = {handleClick}>
    {text}
-  </button>)
+  </button>
+   );
 }
