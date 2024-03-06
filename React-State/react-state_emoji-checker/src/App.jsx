@@ -6,12 +6,20 @@ export default function App() {
 
   const validCode = "🐡🐠🐋";
 
+  function handleClick(fish) {
+    setCode(code + fish);
+  }
+
+  function resetClick() {
+    setCode("");
+  }
+
   return (
     <div className="container">
       <div className="button-container">
         <button
           type="button"
-          onClick={() => {setCode(code + '🐡')
+          onClick={() => {handleClick("🐡")
           }}
         >
           <span role="img" aria-label="Pufferfish">
@@ -20,7 +28,7 @@ export default function App() {
         </button>
         <button
           type="button"
-          onClick={() => {setCode(code + '🐋')
+          onClick={() => {handleClick("🐋")
           }}
         >
           <span role="img" aria-label="Whale">
@@ -29,7 +37,7 @@ export default function App() {
         </button>
         <button
           type="button"
-          onClick={() => {setCode(code + '🐠')
+          onClick={() => {handleClick("🐠")
           }}
         >
           <span role="img" aria-label="Clownfish">
@@ -40,7 +48,7 @@ export default function App() {
 
       <button
         type="button"
-        onClick={() => {setCode('')
+        onClick={() => {resetClick()
         }}
       >
         Reset
