@@ -1,3 +1,5 @@
+import Entry from "./Entry.jsx"
+
 export default function Entries() {
     return (
         <div>
@@ -5,8 +7,7 @@ export default function Entries() {
                 <a>All Entries</a>
                 <a>Favourites</a>
             </nav>
-        
-
+        <Entry />
         </div>
     )
 }
