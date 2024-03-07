@@ -1,0 +1,20 @@
+.favourite-button {
+    background-color: white;
+    border: none;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1vw; */
+    /* margin: 2rem; */
+}
+
+h4{
+    align-self: flex-start;
+}
+
+.notes{
+    text-align: left;
+}
+

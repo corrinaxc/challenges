@@ -1,3 +1,7 @@
+import starFilled from "./../../assets/star-filled.svg";
+import star from "./../../assets/star.svg";
+import "./entries.css";
+
 const entries = [
     {
       id: 1000,
@@ -32,11 +36,11 @@ export default function Entry() {
     return(
     <>
     {entries.map(({id, date, motto, notes}) => (
-    <div key={id}>
+    <div className="entry" key={id}>
         <h3>{date}</h3>
         <h4>{motto}</h4>
-        <p>{notes}</p>
-        <button className="favourite-button"></button>
+        <p className="notes">{notes}</p>
+        <button className="favourite-button"><img src={star} alt="non-filled star"/></button>
     </div>
     ))}
     </>
