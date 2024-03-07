@@ -1,3 +1,30 @@
 button{
- background-color: var(--color-nemo);   
+ background-color: var(--color-nemo);
+ width: 17vw;
+ height:6vw;
+ border-radius: 1vw;
+ align-self:center;
+ margin:2rem;
+ color: var(--color-water-10); 
+ border: none;
+}
+
+.inputForm {
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    margin:10vw;
+    margin-top:0;
+}
+
+h2{
+    align-self:center;
+}
+
+.notes-input{
+    height:20vw;
+}
+
+.input-label {
+    margin:1vw;
 }

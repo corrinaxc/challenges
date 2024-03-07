@@ -1,6 +1,8 @@
+import "./footer.css"
+
 export default function Footer(){
     return (
-    <div>
+    <footer>
         <p>Journal App - 2028</p>
-    </div>
+    </footer>
 )}

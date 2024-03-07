@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
     /* Used for texts (+ footer background) */
     --color-granite: #252629;
@@ -20,9 +19,17 @@
 body{
   display:flex;
   align-items: center;
+  color: var(--color-granite);
+  /* padding: 2rem; */
 }
   .journal-app-header{
     width:100vw;
-    background-color:lightgrey;
+    background-color: var(--color-foam);
     text-align: center;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

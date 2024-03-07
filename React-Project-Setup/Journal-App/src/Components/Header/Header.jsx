@@ -1,7 +1,7 @@
-import styles from "./header.module.css";
+import "./header.css"
 
 export function Header() {
-    return <div>
-        <h1>Journal App</h1>
+    return <div className="header">
+        <h1>Journal</h1>
     </div>
 }

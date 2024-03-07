@@ -1,5 +1,11 @@
-.journal-app-header{
+.header{
     width:100vw;
     background-color:lightgrey;
     text-align: center;
+    margin: top 0;
+    padding:0;
+}
+
+h1{
+    margin:0;
 }
