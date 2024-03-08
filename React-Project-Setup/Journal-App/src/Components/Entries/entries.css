@@ -1,11 +1,16 @@
 .favourite-button {
     background-color: white;
     border: none;
+    position: absolute;
+    top: 0;
+    right:0;
 }
 
 .entry {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
     /* gap: 1vw; */
     /* margin: 2rem; */
 }
