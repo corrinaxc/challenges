@@ -1,11 +1,12 @@
 import Entry from "./Entry.jsx"
+import "./entries.css";
 
 export default function Entries() {
     return (
         <div>
             <nav>
-                <a>All Entries</a>
-                <a>Favourites</a>
+                <a className="all-entries">All Entries</a>
+                <a className="favourites">Favourites</a>
             </nav>
         <Entry />
         </div>

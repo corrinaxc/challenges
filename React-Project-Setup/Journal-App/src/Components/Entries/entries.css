@@ -2,8 +2,8 @@
     background-color: white;
     border: none;
     position: absolute;
-    top: 0;
-    right:0;
+    top: 9px;
+    right:10px;
 }
 
 .entry {
@@ -15,11 +15,37 @@
     /* margin: 2rem; */
 }
 
+h3{
+    margin:3vw;
+    margin-left:0;
+}
+
 h4{
     align-self: flex-start;
+    margin:3vw;
+    margin-left:0;
 }
 
 .notes{
     text-align: left;
 }
 
+p{
+    margin:3vw;
+    margin-left:0;
+    margin-bottom:7vw;
+}
+
+nav{
+    text-align: left;
+    display: flex;
+    gap:3vw;
+}
+
+div{
+    border-bottom: 1px solid rgba(53, 49, 49, 0.202);
+}
+
+.all-entries{
+    color: var(--color-nemo);
+}

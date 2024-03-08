@@ -20,6 +20,7 @@ body{
   display:flex;
   align-items: center;
   color: var(--color-granite);
+  position: relative;
   /* padding: 2rem; */
 }
   .journal-app-header{
