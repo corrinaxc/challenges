@@ -14,6 +14,7 @@ Currently, the only thing not working is the state update.
 You can use the following hints as guideline:
 
 - Look at `./src/components/Form/index.jsx`; what kind of data is lifted up to the `App`?
+  Id, Name, Emoji
 - In the `./src/App.jsx` file, there is a `handleAddAnimal` function which only calls a `console.log`.
 - Replace the `console.log` with the state setter function; pass it a copy of the previous state and add the submitted animal at the end of this new state.
 
