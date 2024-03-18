@@ -1,4 +1,5 @@
 import Link from "next/link"
+import VolumeDetail from "./volumes/[slug]"
 
 export default function Volumes() {
     return (
