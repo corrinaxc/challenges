@@ -10,12 +10,22 @@ export default function VolumeDetail() {
     const {slug} = router.query;
 
     let volume = volumes.find((volume) => slug === volume.slug);
-
     if (!volume) {
         return <div>Volume not found</div>;
     }
 
     const { title, description, cover, books } = volume;
+
+    function handleClick() {
+        const currentIndex = volumes.findIndex((volume) => volume.slug === slug );
+        const nextIndex = currentIndex + 1
+        const nextVolume = nextIndex < volumes.length ? volumes[nextIndex] : null;
+        if (nextVolume) {
+            router.push(`/volumes/${nextVolume.slug}`);
+        } else {
+            console.log("End of Series");
+        }
+    }
 
     return (
             <div>
@@ -25,7 +35,7 @@ export default function VolumeDetail() {
             <Image src={volume.cover}
             height={230}
             width={140}
-            alt="book cover of fellowship of the ring"/>
+            alt={`book cover of ${volume.title}`}/>
         <ul>
         {books.map((book, index) => (
                     <li key={index}>
@@ -33,6 +43,9 @@ export default function VolumeDetail() {
                     </li>
                 ))}
         </ul>
-            </div>
+        <p> </p>
+        <button onClick={handleClick}>Next Volume</button>
+        {/* {nextVolume === null && <div>End of Series</div>} */}
+        </div>
         );
 }
