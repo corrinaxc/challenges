@@ -8,11 +8,8 @@ import Link from "next/link";
 export default function VolumeDetail() {
     const router = useRouter();
     const {slug} = router.query;
-    console.log('slug', slug);
 
     let volume = volumes.find((volume) => slug === volume.slug);
-
-    console.log('volume', volume);
 
     if (!volume) {
         return <div>Volume not found</div>;
