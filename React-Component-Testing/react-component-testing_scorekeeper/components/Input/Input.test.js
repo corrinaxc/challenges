@@ -4,7 +4,7 @@ import Input from ".";
 
 test("renders a label and an input with the correct attributes", () => {
     render(<Input />);
-    const label = screen.getByRole("label", );
+    const label = screen.getByRole("label");
     const input = screen.getByRole("textbox");
     expect(label).toBeInTheDocument();
     expect(input).toBeInTheDocument();
@@ -13,13 +13,10 @@ test("renders a label and an input with the correct attributes", () => {
 });
 
 test("calls callback on every user input", async () => {
-    const onChange = jest.fn;
-    const user = userEvent.setup()
+    const onChange = jest.fn();
+    const user = userEvent.setup();
     render(<Input onChange={onChange}></Input>) 
-
     const input = screen.getByRole("textbox")
-
-    await user.type(input, "my game")
-
-    expect(onChange).toHaveBeenCalled()
+    await user.type(input, "my game");
+    expect(onChange).toHaveBeenCalledTimes(7);
 });
