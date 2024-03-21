@@ -17,6 +17,11 @@ const lightsOn = [
 export default function App({ Component, pageProps }) {
   const [isOn, setIsOn] = useState(lightsOn);
 
+  const lightComponents = isOn.map((light) => ({
+  id: light.id,
+  isOn:light.isOn,
+  name: light.name
+}))
   const lightCount = isOn.filter(light => light.isOn).length;
   // const lightCountSum = lightCount.reduce((a, b) => a + b);
   console.log(lightCount);
@@ -28,7 +33,8 @@ export default function App({ Component, pageProps }) {
       <Component 
       {...pageProps}
       isOn={isOn}
-      lightCount = {lightCount}
+      lightCount={lightCount}
+      lights={lightComponents}
       // lightCountSum={lightCountSum} 
       />
     </Layout>
