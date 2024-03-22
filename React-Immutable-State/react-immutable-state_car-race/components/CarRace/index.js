@@ -14,8 +14,11 @@ const finishLine = 200;
 export default function CarRace() {
   const [cars, setCars] = useState(initialCars);
 
+  const clickedCar = cars.map((car) => car.isClicked)
+
   function moveCar(clickedCar) {
     const coveredDistance = getRandomDistance();
+    setCars(...cars, position.x= coveredDistance)
     console.log("clickedCar", clickedCar);
     console.log("coveredDistance", coveredDistance);
   }
