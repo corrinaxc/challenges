@@ -45,9 +45,6 @@ export default function App({ Component, pageProps }) {
     setLights(updatedLightArray);
   }
 
-  
-    
-
   return (
     <Layout>
       <GlobalStyle />
