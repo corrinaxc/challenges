@@ -45,8 +45,10 @@ export default function App({ Component, pageProps }) {
     setLights(updatedLightArray);
   }
 
+    const isDimmed = lights.every(light => light.isOn === false);
+
   return (
-    <Layout>
+    <Layout isDimmed={isDimmed}>
       <GlobalStyle />
       <Component 
       {...pageProps}
