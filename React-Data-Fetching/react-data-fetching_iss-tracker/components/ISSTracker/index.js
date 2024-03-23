@@ -13,35 +13,7 @@ export default function ISSTracker() {
  
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
-  console.log(data);
   return (
-//   const [coords, setCoords] = useState({
-//     longitude: 0,
-//     latitude: 0,
-//   });
-
-//   async function getISSCoords() {
-//     try {
-//       const response = await fetch(URL);
-//       if (response.ok) {
-//         const data = await response.json();
-//         setCoords({ longitude: data.longitude, latitude: data.latitude });
-//       }
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   }
-
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       getISSCoords();
-//     }, 5000);
-
-//     return () => {
-//       clearInterval(timer);
-//     };
-//   }, []);
-
     <main>
       <Map longitude={data.longitude} latitude={data.latitude} />
       <Controls
