@@ -9,13 +9,11 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 
 export default function ISSTracker() {
-  const { data, error, isLoading } = useSWR(URL, fetcher)
+  const { data, error, isLoading, mutate } = useSWR(URL, fetcher, { refreshInterval: 5000 })
  
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
   console.log(data);
-  const longitude = data.longitude;
-  const latitude = data.latitude;
   return (
 //   const [coords, setCoords] = useState({
 //     longitude: 0,
@@ -45,11 +43,11 @@ export default function ISSTracker() {
 //   }, []);
 
     <main>
-      <Map longitude={longitude} latitude={latitude} />
+      <Map longitude={data.longitude} latitude={data.latitude} />
       <Controls
-        longitude={longitude}
-        latitude={latitude}
-        // onRefresh={getISSCoords}
+        longitude={data.longitude}
+        latitude={data.latitude}
+        onRefresh={() => mutate()}
       />
     </main>
   );
