@@ -19,6 +19,7 @@ Start the app and have a look at it in the browser: `npm run dev`
 Discuss in the group:
 
 - Which features should be tested?
+  heading, fallback message, form, submit button
 - Which features should **not** be tested?
 
 ### Writing Component Tests
@@ -48,6 +49,27 @@ Switch to `components/Input/Input.test.js` and write the tests for all given acc
 - To check for attributes like `placeholder` or `name`, you can use the matcher `toHaveAttribute(attributeName, value)`.
 - The `Input` component receives an `onChange` callback; in order to test it, remember that you have to mock if first.
 - You can check how often a function has been called with `toHaveBeenCalledTimes(numberOfExpectedCalls)`.
+
+const user = userEvent.setup();
+
+render(<FahrenheitConverter />);
+
+const input = screen.getByLabelText(/°C/i);
+expect(input).toBeInTheDocument();
+
+const button = screen.getByRole("button", { name: /convert to fahrenheit/i });
+expect(button).toBeInTheDocument();
+
+await user.type(input, "5");
+await user.click(button);
+
+const output = screen.getByText(/41 °F/i);
+expect(output).toBeInTheDocument();
+
+const message = screen.queryByText(
+/please enter a celsius value and submit/i
+);
+expect(message).not.toBeInTheDocument();
 
 #### Player
 
@@ -89,6 +111,8 @@ Remove the `.skip` method and run `npm run test`.
 You will notice that both tests fail. Read the error message carefully and fix the bug in `components/HistoryEntry/index.js` so that the test passes again. (The tests are correct, but there is something wrong with the component).
 
 Congratulations, you have fixed your first bug according to a failing test! 🎉
+
+toHaveBeenCalledWith()
 
 ## Development
 
