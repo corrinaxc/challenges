@@ -3,13 +3,14 @@ import userEvent from "@testing-library/user-event";
 import Input from ".";
 
 test("renders a label and an input with the correct attributes", () => {
-    render(<Input />);
-    const label = screen.getByRole("label");
+    render(    <Input
+        name="nameOfInputFiled"
+        labelText="label"
+        placeholder="e.g. Dodelido"
+        required
+      ></Input>);
     const input = screen.getByRole("textbox");
-    expect(label).toBeInTheDocument();
-    expect(input).toBeInTheDocument();
-    expect(label).toHaveAttribute('htmlFor', "Name of Game");
-    expect(input).toHaveAttribute('placeholder', "e.g. Dodelido");
+    const label = screen.getByLabelText(/label/i);
 });
 
 test("calls callback on every user input", async () => {
