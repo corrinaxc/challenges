@@ -6,7 +6,10 @@ test("renders player information and two buttons", () => {
     render(<Player
     name = "Corrina"
     score="50"></Player>)
+    const name = screen.getByText("Corrina")
     const button = screen.getAllByRole("button");
+
+    expect(name).toBeInTheDocument();
     expect(button).toHaveLength(2);
 });
 
