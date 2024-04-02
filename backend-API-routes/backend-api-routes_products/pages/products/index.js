@@ -12,7 +12,7 @@ return (
     <>
     <ul>
         {data.map((product) => (
-            <li key={product.data}>
+            <li key={product.id}>
                 <h1>{product.name}</h1>
                 <p>{product.description}</p>
                 <p>price: {product.currency}{product.price}</p>
