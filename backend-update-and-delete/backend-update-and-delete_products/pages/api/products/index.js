@@ -1,3 +1,4 @@
+import ProductForm from "@/components/ProductForm";
 import dbConnect from "../../../db/connect";
 import Product from "../../../db/models/Product";
 
@@ -19,5 +20,4 @@ export default async function handler(request, response) {
       console.error(error);
       return response.status(400).json({ error: error.message });
     }
-  }
-}
+  }};
