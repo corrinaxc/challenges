@@ -1,9 +1,13 @@
-import { products } from "../../../lib/products";
+import Product from "../../db/models/product.js";
+import dbConnect from "../../../pages/db/connect.js";
 
-export default function handler(request, response) {
+export default async function handler(request, response) {
+  await dbConnect();
+  console.log(request.query)
   const { id } = request.query;
 
-  const product = products.find((product) => product._id === id);
+  if (request.method === "GET") {
+    const product = await Product.findById(id);
 
   if (!product) {
     return response.status(404).json({ status: "Not Found" });
@@ -11,3 +15,4 @@ export default function handler(request, response) {
 
   response.status(200).json(product);
 }
+};
